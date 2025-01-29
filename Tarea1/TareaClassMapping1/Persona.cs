@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Abel Eduardo Martinez Robles (2024-0227)
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,15 +12,46 @@ namespace TareaClassMapping1
     {
         static void Main(string[] args)
         {
-            //empezar aqui
-            Persona persona1 = new Persona();
-            persona1.Name = "Juan";
-            Console.Write(persona1.Name);
+            Console.WriteLine("Este es el mapa de clases");
         }
     }
-    
     public class Persona
     {
-        public string Name { get; set; }
+  
+    }
+
+
+    public class MiembroDeLaComunidad : Persona
+    {
+    }
+
+    public class Estudiante : MiembroDeLaComunidad
+    {
+    }
+
+    public class ExAlumno : Estudiante
+    {
+    }
+
+    public class Empleado : MiembroDeLaComunidad
+    {
+    }
+
+    public class Administrativo : Empleado
+    {
+    }
+
+    public class Docente : Empleado
+    {
+    }
+
+    public class Maestro : Docente
+    {
+    }
+
+  
+    public class Administrador : Docente
+    {
+        
     }
 }
