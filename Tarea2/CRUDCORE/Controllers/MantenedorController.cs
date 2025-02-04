@@ -29,12 +29,12 @@ namespace CRUDCORE.Controllers
         public IActionResult Guardar(ContactoModel oContacto)
         {
             //Este metodo recibe el objeto para guardarlo en BD
+
+
             var respuesta = _ContactoDatos.Guardar(oContacto);
 
             if (respuesta)
-            
                 return RedirectToAction("Listar");
-            
             else 
                 return View();
             
