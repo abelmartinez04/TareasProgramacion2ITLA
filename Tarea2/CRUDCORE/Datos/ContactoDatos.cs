@@ -121,8 +121,15 @@ namespace CRUDCORE.Datos
                 }
                 rpta = true;
             }
+            catch (SqlException e)
+            {
+                Console.WriteLine("Error de SQL: " + e.Message);
+                rpta = false;
+            }
+
             catch (Exception e)
             {
+                //Console.WriteLine("Error de SQL: " + e.Message);
                 string error = e.Message;
                 rpta = false;
             }
@@ -144,7 +151,7 @@ namespace CRUDCORE.Datos
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_Eliminar", conexion);
-                    cmd.Parameters.AddWithValue("IdContact", IdContact);
+                    cmd.Parameters.AddWithValue("@IdContact", IdContact);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }

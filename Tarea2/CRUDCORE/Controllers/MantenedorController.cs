@@ -62,6 +62,23 @@ namespace CRUDCORE.Controllers
             else
                 return View();
         }
-        //1:32:55
+
+        public IActionResult Eliminar(int IdContact)
+        {
+            //Este metodo solo devuelve la vista
+            var ocontacto = _ContactoDatos.Obtener(IdContact);
+            return View(ocontacto);
+        }
+
+        [HttpPost]
+        public IActionResult Eliminar(ContactoModel oContacto)
+        { 
+            var respuesta = _ContactoDatos.Eliminar(oContacto.IdContact);
+
+            if (respuesta)
+                return RedirectToAction("Listar");
+            else
+                return View();
+        }
     }
 }
