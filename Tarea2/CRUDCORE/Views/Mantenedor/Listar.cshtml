@@ -30,6 +30,7 @@
                         <td>@item.Correo</td>
                         <td>
                             <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btr-sm" asp-route-IdContact="@item.IdContact">Editar</a>
+                            <a asp-action="Eliminar" asp-controller="Mantenedor" class="btn btn-danger btr-sm" asp-route-IdContact="@item.IdContact">Eliminar</a>
                         </td>
                     </tr>
                 }
