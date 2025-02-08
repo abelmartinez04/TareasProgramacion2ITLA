@@ -46,7 +46,7 @@ namespace CRUDCORE.Controllers
         {
             //Este metodo solo devuelve la vista
             var ocontacto = _ContactoDatos.Obtener(IdContact);
-            return View();
+            return View(ocontacto);
         }
 
         [HttpPost]
@@ -62,6 +62,6 @@ namespace CRUDCORE.Controllers
             else
                 return View();
         }
-
+        //1:32:55
     }
 }

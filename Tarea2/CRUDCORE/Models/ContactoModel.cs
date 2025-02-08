@@ -15,4 +15,3 @@ namespace CRUDCORE.Models
         public string? Correo { get; set; }
     }
 }
-// me quede aqui https://youtu.be/qcRCDM5KiSo?si=d1jaeq7ct_F-xC7q&t=4583
