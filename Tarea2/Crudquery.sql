@@ -3,6 +3,9 @@ create database DBCRUDCORE
 
 USE DBCRUDCORE
 
+SELECT * FROM CONTACTO
+SELECT name FROM sys.databases WHERE name = 'DBCRUDCORE';
+
 CREATE TABLE CONTACTO(
 IdContact int identity primary key,
 Nombre varchar(50),
