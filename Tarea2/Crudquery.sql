@@ -24,7 +24,7 @@ begin
 	select * from CONTACTO where IdContact = @IdContact
 end
 
-
+select * from CONTACTO
 
 create procedure sp_Guardar(
 @Nombre varchar(100),

@@ -29,7 +29,8 @@ namespace CRUDCORE.Controllers
         public IActionResult Guardar(ContactoModel oContacto)
         {
             //Este metodo recibe el objeto para guardarlo en BD
-
+            if (!ModelState.IsValid)
+                return View();
 
             var respuesta = _ContactoDatos.Guardar(oContacto);
 
