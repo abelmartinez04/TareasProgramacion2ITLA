@@ -42,7 +42,26 @@ namespace CRUDCORE.Controllers
             
         }
 
+        public IActionResult Editar(int IdContact)
+        {
+            //Este metodo solo devuelve la vista
+            var ocontacto = _ContactoDatos.Obtener(IdContact);
+            return View();
+        }
 
+        [HttpPost]
+        public IActionResult Editar(ContactoModel oContacto)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var respuesta = _ContactoDatos.Editar(oContacto);
+
+            if (respuesta)
+                return RedirectToAction("Listar");
+            else
+                return View();
+        }
 
     }
 }

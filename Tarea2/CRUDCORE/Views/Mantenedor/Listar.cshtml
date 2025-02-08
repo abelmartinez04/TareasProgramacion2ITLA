@@ -29,7 +29,7 @@
                         <td>@item.Telefono</td>
                         <td>@item.Correo</td>
                         <td>
-                            <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btr-sm">Editar</a>
+                            <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btr-sm" asp-route-IdContact="@item.IdContact">Editar</a>
                         </td>
                     </tr>
                 }
