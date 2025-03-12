@@ -4,7 +4,8 @@ using System.Threading;
 
 namespace ControlTareasEscolares.Models.Entities
 {
-    public class Estudiente
+    [Table("Estudiante")]
+    public class Estudiante
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -21,7 +22,7 @@ namespace ControlTareasEscolares.Models.Entities
         [MaxLength(100)]
         public string Correo { get; set; }
         [Column("FechaRegistro")]
-        public DateTime ? FechaRegistro { get; set; } = DateTime.Now;
+        public DateTime ? FechaRegistro { get; set; }
 
         //public ICollection<Tarea> Tareas { get; set; }
     }

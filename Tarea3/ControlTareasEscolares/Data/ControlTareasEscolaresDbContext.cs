@@ -10,7 +10,7 @@ namespace ControlTareasEscolares.Data
         {
         }
 
-        public DbSet<Estudiente> Estudiantes { get; set; }
+        public DbSet<Estudiante> Estudiantes { get; set; }
     }
 
 }
