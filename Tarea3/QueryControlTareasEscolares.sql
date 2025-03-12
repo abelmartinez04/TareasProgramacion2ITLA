@@ -34,3 +34,6 @@ CREATE TABLE Recordatorio (
     TareaId INT,
     FOREIGN KEY (TareaId) REFERENCES Tarea(Id) ON DELETE CASCADE
 );
+
+
+Select * from Estudiante
