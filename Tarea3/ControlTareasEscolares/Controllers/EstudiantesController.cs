@@ -13,7 +13,7 @@ namespace ControlTareasEscolares.Controllers
     public class EstudiantesController : Controller
     {
         private readonly ControlTareasEscolaresContext _context;
-
+        
         public EstudiantesController(ControlTareasEscolaresContext context)
         {
             _context = context;
@@ -54,7 +54,7 @@ namespace ControlTareasEscolares.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Correo,FechaRegistro")] Estudiante estudiante)
+        public async Task<IActionResult> Create(Estudiante estudiante)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ControlTareasEscolares.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Correo,FechaRegistro")] Estudiante estudiante)
+        public async Task<IActionResult> Edit(int id, Estudiante estudiante)
         {
             if (id != estudiante.Id)
             {
