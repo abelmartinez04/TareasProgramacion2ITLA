@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ControlTareasEscolares.Models.Entities.Estudiante>
+﻿@model IEnumerable<ControlTareasEscolares.Models.Entities.Profesor>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,19 +7,19 @@
 <h1>Index</h1>
 
 <p>
-    <a class="btn btn-success" asp-action="Create"><i class="bi bi-plus-circle"></i>Crear nuevo</a>
+    <a class="btn btn-success" asp-action="Create"><i class="bi bi-plus-circle"></i>Crear</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Nombre
+                @Html.DisplayNameFor(model => model.Nombre)
             </th>
             <th>
-                Correo
+                @Html.DisplayNameFor(model => model.Correo)
             </th>
             <th>
-                FechaRegistro
+                @Html.DisplayNameFor(model => model.Especialidad)
             </th>
             <th></th>
         </tr>
@@ -28,13 +28,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @item.Nombre
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @item.Correo
+                @Html.DisplayFor(modelItem => item.Correo)
             </td>
             <td>
-                @item.FechaRegistro
+                @Html.DisplayFor(modelItem => item.Especialidad)
             </td>
             <td>
                 <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Editar</a> |
